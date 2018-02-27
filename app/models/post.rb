@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
     if self.title
       if self.title.include? "Won't Believe" || "Secret" || "True" || "Top" || "Guess"
       else
-        errors.add(:title, "not a clickbait-y title")
+        errors.add(:title)
       end
     end
   end
